@@ -14,6 +14,11 @@ function buildPDF(dataCallback, endCallback) {
       `sample Page`
     );
     // Add an image, constrain it to a given size, and center it vertically and horizontally
+doc.image('./page.png', {
+  fit: [250, 300],
+  align: 'center',
+  valign: 'center'
+});
 
   doc.end();
 }
